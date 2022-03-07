@@ -1,0 +1,25 @@
+{
+  "name": "overflow_art",
+  "version": "1.0.0",
+  "description": "npm install express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-oak-project/overflow_art.git"
+  },
+  "keywords": [
+    "Art",
+    "Personal",
+    "Projects",
+    "Experimental"
+  ],
+  "author": "Leo Buckey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-oak-project/overflow_art/issues"
+  },
+  "homepage": "https://github.com/the-oak-project/overflow_art#readme"
+}
