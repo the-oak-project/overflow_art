@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/the-oak-project/overflow_art/issues"
   },
-  "homepage": "https://github.com/the-oak-project/overflow_art#readme"
+  "homepage": "https://github.com/the-oak-project/overflow_art#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
