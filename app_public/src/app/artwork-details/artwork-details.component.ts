@@ -9,7 +9,7 @@ export class ArtworkDetailsComponent implements OnInit {
 
   constructor() { }
 
-  public s3Url: string = 'https://the-art-project.s3.us-east-2.amazonaws.com/';
+  // public s3Url: string = 'https://overflow-art.s3.us-east-2.amazonaws.com/static/heart/';
   public message: string | undefined;
 
   private showError(error: any): void {
