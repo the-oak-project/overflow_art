@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2022-06-24T20:55:54Z"
+  generation: 1
+  name: overflow-ingress
+  namespace: default
+  resourceVersion: "7377006"
+  uid: 40ebf8e4-8dfd-40e3-9574-7de8aa10442a
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: www.overflow.art
+    http:
+      paths:
+      - backend:
+          service:
+            name: overflow-service-cluster-ip
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer:
+    ingress:
+    - hostname: a909d9e5436074f4fa51ceae112d0f0c-795542476.us-east-2.elb.amazonaws.com

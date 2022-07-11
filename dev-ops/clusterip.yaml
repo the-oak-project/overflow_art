@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: overflow-service-cluster-ip
+spec:
+  type: ClusterIP
+  selector:
+    app: overflow
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
