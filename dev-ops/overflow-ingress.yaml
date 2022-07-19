@@ -2,19 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod # This helps our ClusterIssuer identify this Ingress resource.
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt-prod  # This helps our ClusterIssuer identify this Ingress resource.
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"creationTimestamp":"2022-06-24T20:55:54Z","generation":1,"name":"overflow-ingress","namespace":"default","resourceVersion":"7377006","uid":"40ebf8e4-8dfd-40e3-9574-7de8aa10442a"},"spec":{"ingressClassName":"nginx","rules":[{"host":"www.overflow.art","http":{"paths":[{"backend":{"service":{"name":"overflow-deployment","port":{"number":80}}},"path":"/","pathType":"Prefix"}]}}]},"status":{"loadBalancer":{"ingress":[{"hostname":"a909d9e5436074f4fa51ceae112d0f0c-795542476.us-east-2.elb.amazonaws.com"}]}}}
-  creationTimestamp: "2022-06-24T21:13:33Z"
-  generation: 2
   name: overflow-ingress
   namespace: default
-  resourceVersion: "7380510"
-  uid: b8fb6bad-be6a-4066-9800-cf601b9f3115
 spec:
   ingressClassName: nginx
-  tls: # This describes TLS for our site
+  tls: # This describes TLS for site
   - hosts:
     - www.overflow.art
     secretName: overflow-tls
